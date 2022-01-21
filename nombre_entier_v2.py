@@ -13,6 +13,7 @@ def estPremier(num):
         # exclut 0,1 et tous les chiffre negatif
         return False
 
+n=int(input("Entrez un nombre:"))
 
 if estPremier(n):
     print(n,"Est un nombre premier")
