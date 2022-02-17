@@ -1,0 +1,30 @@
+
+print ( '"' + ". ".join([i.capitalize() for i in texte.split(". ")]) + '"'  )
+
+# On splie le texte en phrase avec le point comme delimiteur
+
+phrase = texte.split(". ") 
+print (phrase)
+
+# Pour chaque phrase on capitalize le premier caractère 
+for p in phrase:
+    print (p.capitalize())
+    
+# On reconstruit le texte avec la caps dans une variable resultat on commence la string avec le " 
+# et on remet le . avec un espace la fin
+resultat = ''
+
+for p in phrase:
+     resultat += p.capitalize() + ". "
+     
+print (resultat)
+
+#netoyage du resulat si ya un deux points a la fin
+
+if resultat[-2] == ".":
+    resultat = resultat[:len(resultat)-2]
+
+print (resultat)
+
+# on rajoute les appostrophe au texte
+print ('"' + resultat + '"')
